@@ -28,5 +28,20 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
+    {
+      resolve: 'gatsby-source-wordpress',
+      options: {
+        baseUrl: 'http://purplegorillaevents.wordpress.com',
+        protocol: 'http',
+        hostingWPCOM: true,
+        useACF: false,
+        auth: {
+          wpcom_app_clientSecret: 'PJGx8fZqaf6wUB8bWV53XcFkydYr7drBGlqfD1cqfNY2rxQBSFk0CdP2zJcvAPuu',
+          wpcom_app_clientId: '63881',
+          wpcom_user: 'purple.gorilla.events@gmail.com',
+          wpcom_password: 'Foam23541'
+        }
+      }
+    }
   ],
 }
