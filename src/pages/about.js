@@ -1,12 +1,22 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { graphql } from 'gatsby'
+// import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
-const About = () => (
+export default ({ data }) => (
   <Layout>
-    <h1 style={{ textAlign: 'center' }}>About</h1>
+    <h1 style={{ textAlign: 'center' }}>About { data.site.siteMetadata.title }</h1>
+    <p style={{ textAlign: 'center', fontSize: '18px', padding: '10px' }}>This is a test</p>
   </Layout>
 )
 
-export default About
+export const query = graphql `
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

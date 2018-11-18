@@ -40,7 +40,19 @@ module.exports = {
           wpcom_app_clientId: '63888',
           wpcom_user: 'purple.gorilla.events@gmail.com',
           wpcom_password: 'Foam23541'
-        }
+        },
+         includedRoutes: [
+           "/*/*/posts",
+           "/*/*/pages",
+         ],
+         exludedRoutes: [
+           "/*/*/categories",
+            "/*/*/media",
+            "/*/*/tags",
+            "/*/*/taxonomies",
+            "/*/*/users",
+         ],
+         verboseOutput: true,
       }
     }
   ],
