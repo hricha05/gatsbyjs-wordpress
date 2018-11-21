@@ -31,10 +31,10 @@ module.exports = {
     {
       resolve: 'gatsby-source-wordpress',
       options: {
-        baseUrl: 'localhost/purplegorilla2018/',
-        protocol: 'http',
-        hostingWPCOM: false,
-        useACF: true,
+        baseUrl: '//purplegorillaevents.wordpress.com/',
+        protocol: 'https',
+        hostingWPCOM: true,
+        useACF: false,
         auth: {
           wpcom_app_clientSecret: '1wzBNnsE4japgsHqXfZYFlf8yRpUoBfnHRw8jYwxraWjoWw45fDF8XCrcFnjETjT',
           wpcom_app_clientId: '63888',
