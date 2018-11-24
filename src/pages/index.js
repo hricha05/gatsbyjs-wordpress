@@ -4,23 +4,23 @@ import { graphql } from 'gatsby'
 // import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
+import Grid from '@material-ui/core/Grid'
 
 export default ({ data }) => {
   console.log(data)
-  return (
-    <Layout>
-      <div>
-        <h1>Wordpress Posts</h1>
-        <h4>Posts</h4>
-        {data.allWordpressPost.edges.map(({ node }) => (
-          <div>
-            <p>{node.title}</p>
-            <div dangerouslySetInnerHTML={{ __html: node.content }} />
-          </div>        
-        ))}
-      </div>
+  return <Layout>
+      <Grid container spacing={24}>
+      <hr></hr>
+        <div>
+          <h1>Wordpress Posts</h1>
+          <h4>Posts</h4>
+          {data.allWordpressPost.edges.map(({ node }) => <div>
+              <p>{node.title}</p>
+              <div dangerouslySetInnerHTML={{ __html: node.content }} />
+            </div>)}
+        </div>
+      </Grid>
     </Layout>
-  )
 }
 
 export const pageQuery = graphql`
