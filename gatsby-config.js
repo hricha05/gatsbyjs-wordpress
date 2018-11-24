@@ -1,3 +1,8 @@
+require('dotenv').config({
+  path: '.env',
+});
+
+
 module.exports = {
   siteMetadata: {
     title: 'Purple Gorilla Events',
@@ -27,7 +32,7 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-offline',
     {
       resolve: 'gatsby-source-wordpress',
       options: {
@@ -43,13 +48,14 @@ module.exports = {
         },
          includedRoutes: [
            "/*/*/posts",
-           "/*/*/pages",
+           "/*/*/pages", 
+           "/*/*/categories",
+           "/*/*/tags",
+           "/*/*/media",
+           "/*/*/taxonomies",
+           "/*/*/authors",
          ],
          exludedRoutes: [
-           "/*/*/categories",
-            "/*/*/media",
-            "/*/*/tags",
-            "/*/*/taxonomies",
             "/*/*/users",
          ],
          verboseOutput: true,
