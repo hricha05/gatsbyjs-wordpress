@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Header from '../components/header'
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -13,13 +14,15 @@ import { Link } from 'gatsby'
 const styles = {
   root: {
     flexGrow: 1,
+    // backgroundColor: 'white',
   },
   grow: {
     flexGrow: 2,
   },
   disply: {
+    // background: 'white',
       textDecoration: 'none',
-      color: 'white'
+      color: 'black'
   }
 };
 
@@ -30,9 +33,9 @@ function Navbar (props) {
         <Toolbar>
             <Grid container direction="row" justify="flex-end" alignItems="center">
               <Grid item xs={8}>
-                <Typography variant="p" className={classes.grow}>
+                <Typography variant="title" color="inherit">
                   <Link to="/" className={classes.disply}>
-                    <h1>Purple Gorilla</h1>
+                    <Header />
                   </Link>
                 </Typography>
               </Grid>             
@@ -45,14 +48,14 @@ function Navbar (props) {
               </Grid>
               <Grid item xs={1}>
                 <Typography>
-                <Link to="src/templates/pages" className={classes.disply}>
+                <Link to="/events/" className={classes.disply}>
                   Events
                 </Link>
                 </Typography>
               </Grid>
               <Grid item xs={2}>
                 <Typography>
-                <Link to="/about/" className={classes.disply}>
+                <Link to="/" className={classes.disply}>
                   Contact
                 </Link>
                 </Typography>
