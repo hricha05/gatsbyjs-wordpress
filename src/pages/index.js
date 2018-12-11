@@ -1,41 +1,21 @@
 import React from 'react'
-import { graphql } from 'gatsby'
-// import { node } from 'prop-types';
-// import { Link } from 'gatsby'
+import Grid from '@material-ui/core/Grid'
 
 import Layout from '../components/layout'
-import Grid from '@material-ui/core/Grid'
 
 export default ({ data }) => {
   console.log(data)
   return <Layout>
-      <Grid container spacing={24}>
-      <hr></hr>
-        <div>
-          <h1>Wordpress Posts</h1>
-          <h4>Posts</h4>
-          {data.allWordpressPost.edges.map(({ node }) => <div>
-              <p>{node.title}</p>
-              <div dangerouslySetInnerHTML={{ __html: node.content }} />
-            </div>)}
-        </div>
+      <Grid container direction="row" justify="center" alignContent="center">
+        <h1 style={{
+          textAlign:"center",
+          paddingTop: 20
+        }}>Landing Page Image</h1>
       </Grid>
     </Layout>
 }
 
-export const pageQuery = graphql`
-  query {
-  allWordpressPost(sort: { fields: [date] }) {
-    edges {
-      node {
-        title
-        content
-        slug
-      }
-    }
-  }
-}
-`
+
 
 
 
