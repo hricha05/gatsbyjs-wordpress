@@ -7,11 +7,11 @@ import CardActionArea from '@material-ui/core/CardActionArea'
 import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
-const styles ={
-  card: {
-    maxWidth: 720,
-  }
-}
+// const styles ={
+//   card: {
+//     maxWidth: 720,
+//   }
+// }
 
 const Events = ({ data }) => {
   console.log(data)
@@ -28,7 +28,7 @@ const Events = ({ data }) => {
               style={{
                 margin: 20,
               }}>
-              <Grid item sx={8}>
+              <Grid item sx={4}>
                 <Card>
                   <CardActionArea>
                     <CardContent>

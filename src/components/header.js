@@ -5,11 +5,12 @@ import { Link } from 'gatsby'
 
 
 const Header = ({ data }) => (
-  <div>
+  <div id="header_div">
     <div
-      style={{ margin: '0 auto', maxWidth: 960 }}>
-      <h1 style={{ fontSize: '24px' }}>
-          <Link style={{ color: 'white', textDecoration: 'none' }} to="/">
+      // style={{ margin: '0 auto', maxWidth: 960 }}
+      >
+      <h1 style={{ fontSize: '24px' }} id="header_h1">
+          <Link style={{ margin: 0, padding: 0, color: 'white', textDecoration: 'none' }} to="/" id="siteMetadata">
           {data.site.siteMetadata.title}
         </Link>
       </h1>
