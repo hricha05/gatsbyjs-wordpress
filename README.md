@@ -9,6 +9,8 @@
     
 ## 🧐 What's inside?
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hricha05/gatsbyjs-wordpress.svg)](https://greenkeeper.io/)
+
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
     .
